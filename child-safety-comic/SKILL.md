@@ -1,51 +1,44 @@
 ---
 name: child-safety-comic
-description: 为低龄孩子生成家长可现场展示的日常安全对照图。用于家长想用无血腥的漫画说明楼梯、滑梯等生活场景中的危险动作、可能后果与可模仿的安全动作时。先给两个分镜供家长选，再调用生图工具。
+description: Help a caregiver choose what to teach, then create a wordless side-by-side safety comic for a young child. Use for everyday safety scenes such as stairs, playgrounds, kitchens, and roads, or when the caregiver wants a portable image prompt.
 ---
 
-# 亲子安全对照图
+# Child Safety Comic
 
-默认供 3–6 岁孩子看图，家长在旁讲解。每张图只讲一个日常安全重点。沿用家长的语言与场景；给出年龄时，据此调整动作和后果的表现。
+Default to ages 3 to 6 and one everyday safety lesson per image. Talk to the caregiver in their language. Write image prompts in English.
 
-## 先给两个可选分镜
+## Confirm the teaching intent
 
-1. 从家长的一句话里提取场景、担心的动作和孩子可以照做的安全动作。对不确定的安全规则、具体伤情或因果关系，先查适用的权威指南。若原说法缺乏依据，简短说明并给出有依据的替代动作。用“可能”表述后果；无法核实具体伤情时，用失衡或吃惊等可见结果。只有缺少决定安全动作的关键信息时才追问。
-2. 给 **A、B** 两个简短选项，各写清几格、左列会看到什么、右列要学什么。明确后果会画到哪一步，例如“画到踩空、险些摔倒”或“画到两人的鞋轻轻碰了一下”。通常 A 用四格现场提醒，B 用六格讲清中间过程或后果。两版也可以用相同行数，区别在动作、后果或讲解重点。复杂场景确有第四个有效步骤时才用八格。
-3. 停在选项，等家长确认。接受“A”“B”和“选 B，最后别画哭”等简短回复。将修改并入所选分镜，确认一次后直接出图。选择含混时，只确认选项。
+1. Identify the setting, risky action, safer action the child can perform, and possible direct consequence. Reuse details already given. If a safety premise is uncertain, consult authoritative guidance when available. Briefly correct unsupported claims and offer a supported teaching goal.
+2. Ask one question at a time when the answer will change the picture. Offer two or three concrete options, accept free-form replies, and wait. For a broad request, offer settings first. For a named setting such as a slide, offer distinct lessons such as waiting for the exit to clear, sliding seated with feet first, or clearing the exit after landing.
+3. Once the lesson is clear, settle the possible left outcome and the safer right ending before choosing the grid. Use any outcome the caregiver already specified. When the endpoint is unclear, offer short storyboard choices such as recovering before contact, showing contact, or showing the reaction afterward. Work backward from both endings to the visible actions needed to explain them. Show the exact panel count, left outcome, and right ending in each option. If the caregiver supplied a complete storyboard, summarize it for approval instead. A selection that completes the storyboard, or an explicit instruction to draw the complete storyboard, counts as approval. Apply edits supplied with the selection and ask again only if a material ambiguity remains.
 
-## 把分镜画成一张图
+## Write the approved image prompt
 
-- 固定两列，每列 2–4 个等大格子，用清晰留白分隔。左列自上而下画危险动作和可能后果；右列自上而下画同一情境下能照做的安全步骤。相同行用可比较的动作或结果。两列用同一个原创孩子、同一套衣服、同一场地和相近视角。
-- 分镜先确定一个能一眼看出的左右差别，例如整条手臂伸进门的关闭区域，或双手贴在胸前、身体退到门外。每格只强调一个动作。需要交代物体移动时，选能看出起点、移动方向和终点的视角。关门夹手要看见手指先伸入打开的缝，再从门扇和门框两侧夹住。受力点太小就把关键一行的两格都拉近。若一个人同时操作物体和遇险导致手臂重叠，可由另一人操作，并用站位和衣色区分两人。
-- 用图解式的清楚构图和早期日式家庭动画的可爱造型，圆脸、短肢体、粗轮廓、平涂色块、简洁背景。图内无文字。撞击可用紧贴接触点的短线和身体受力后的动作表现，留出接触点，省去头顶提示符号。关键一行可左右同步拉近，保留足以认出场景的环境。
-- 每格写明可见的动作和位置变化。表现踩空时，让鞋与台阶边缘之间的空隙以及前倾的身体同时入镜。确实要讲碰撞时，可用双人中景画轻微接触，交代谁碰到了谁以及接触位置，再用挤紧的双眼、缩脚或耸肩表现反应。表现事后时，可画孩子坐稳、红鼻子或少量眼泪。所有选项排除血液、开放伤口、肢体变形和猛烈撞击特写。只有家长明确选择讲骨折且具体场景有依据时，才可在人物旁加独立的卡通骨头裂纹图标，保持人物完整穿衣、外观无伤口。
-- 按确认的分镜区分险情和已经发生的意外。选定碰倒、夹手或烫手时，画清危险动作、接触点和随后的反应。缩手、捂膝、哭泣或大人赶来照看都可以表现后果。严重事故用简化的无血腥画法，图外用语避免暗示真实伤情一定轻微。
-- 安全列给出孩子能做到的动作，并画出合理的结局。适合求助的场景用眼神、张口和指向表达请求，再画大人回应。人物与移动物体沿各列保持清楚的站位和移动方向。大人的反应应有画面依据，例如起初侧身洗菜，听到招呼再回头。
-- 调用内置生图工具，按“第几行左格／第几行右格”写出每格动作、关键物体及手脚接触点。指定竖幅、两列、准确行数、同一人物与视角，以及上面的伤害表现边界。工具不可用时，告知家长当前无法出图，并保留已经确认的分镜。
+Provide one portrait comic with exactly two columns. Default to three rows: the shared starting situation, the action that changes each path, and each visible outcome. Add a fourth row when two essential moments need separate pictures, such as contact followed by the child's reaction. Pair comparable moments across columns and read each column top to bottom. If the caregiver explicitly requests four panels, explain which beats can be combined and let them choose a shorter version or six panels when the full story needs more room.
 
-## 检查并交付
+Start each standalone English prompt with a single resolved layout: give the total number of equal rectangular panels, two equal columns, the exact row count, one full-height white vertical gutter, and the exact number of full-width white horizontal gutters. Describe every position once as top or numbered row, left or right, with one main action per cell. These locations are composition instructions. All selection numbers, dialogue, and caregiver guidance stay in the conversation.
 
-两列都检查因果。左列应看出后果从哪里来，右列应看出孩子做了什么、接下来怎样。沿各列逐格核对人物的视线、站位，以及物体移动的方向和最终位置。
+Include these constraints in every prompt:
 
-查看实际生成图。把图片缩到约 360 像素宽，先只看图，检查格数、左右顺序、人物与场景一致性和伤害表现。逐列指出动作、后果与安全做法在画面中的依据。再用原图逐格检查每个人的双臂和双手，沿肩、袖口、手腕确认每只手接在正确的手臂上。可见的手指应自然、数量合理，遮挡要能看出原因。核对捂脸、撑地、抓握等手势的接触位置，尤其留意同一侧误画两只手、额外袖子、手指黏连、手穿过物体。碰撞要看得出谁碰到了谁。发现错误时点明格子、人物和问题，优先局部修正，再逐格复查。仍不合格或无法查看成图时，说明本次无法交付已核查的图，并可给出该场景的一句口头提醒。图合格后展示一张图，附一句家长能当场对孩子说的话，聚焦一个可执行动作。
+- Completely wordless artwork. Render no letters, numbers, pseudo-writing, labels, captions, balloons, sound effects, logos, arrows, checkmarks, or explanatory icons. Use blank book covers, clothing, packages, and signs. Include only people, their actions, relevant objects, and the surroundings needed to read those actions.
+- Original preschool characters with round faces, clean outlines and flat colors. All open eyes show a distinct white sclera, a dark iris and a smaller black pupil. Direct the gaze toward the object or person that matters. Use naturally closed eyes when the action calls for it.
+- Keep each character, outfit, setting, and object consistent. Show natural arms and hands, with an unambiguous owner and visible contact where it matters. A matched close view can clarify a tiny contact such as fingertips in a door gap. Use the same view for the corresponding safe action.
+- Show the direct possible consequence of the risky action. If the caregiver selected an actual accident, show the contact or loss of support and what follows. A recoil, flinch, loss of balance, or tears can fit the event. Keep the depiction non-graphic, with no blood, visible wounds, limb distortion, severe impact close-ups, scolding, or humiliation. A simulated near miss ends before contact.
+- Give the safer action a plausible ending. Use visible landmarks to establish movement and relative positions. Carry the previous panel's movement through to where characters and objects end up. When changing views, keep a recognizable landmark in frame. When asking for help fits, let the child look at the adult, gesture and open their mouth, then show the adult responding. Caregivers supply the narration.
 
-## 示例
+## Deliver and check
 
-**路边追球**。八格用固定侧面机位，灰色车道、路沿和蓝车左向右的方向贯穿四行。第一行左右都是球滚下路沿，车从左来。第二行左格孩子跨入车道，右格双脚留在人行道，孩子指球、扭头叫大人。第三行左格画车头碰到孩子身侧、孩子往地上坐倒，车轮与孩子清楚分开。右格孩子牵着大人留在人行道，车向右驶过。第四行左格车已停住，孩子坐地捂膝哭，大人赶到身旁。右格画面右缘留下驶离的车尾，球在车道远侧，孩子仍牵着大人。图外讲解词为“球滚走了，小脚停下，叫大人。”
+- When image generation is available, use the approved final prompt to produce the image. When the caregiver requests a prompt or the session can only produce text, return the final prompt as one copyable English code block. If the caregiver wants another conversational tool to run the whole workflow, provide [the interactive prompt](references/interactive-prompt.txt). A prompt-only image interface receives the final drawing prompt after the choices have been made.
+- At about 360 pixels wide, inspect the exact grid and wordlessness. Read each column on its own and identify what the child wanted, which action changed the outcome, and where the people and objects ended up. Check that the last panel follows the approved outcome and the visible movement. At full size inspect lettering, white sclera in open eyes, character continuity, hands and fingers, contact points, and non-graphic content.
+- If a specific panel fails, name its position and correct the visible defect. Incorrect row counts, merged panels, or words call for a full prompt retry. If the model still drops rows, generate one matching left/right pair per row and stack the pairs top to bottom using equal heights and white gutters. Review the assembled image. When a tool cannot display the output, ask the caregiver to share it for inspection before calling it verified.
+- Deliver the checked comic. Offer a short narration line outside the artwork if requested.
 
-**够高处的书**。左列画踩凳子、凳脚离地和摔坐捂膝。右列孩子双脚留在地上，转向大人、指着想要的书，大人取下同一本书递给孩子。图外可给孩子一句直接学说的话“我想看上面的书，你帮我拿一下好吗？”
+## Storyboard examples
 
-**厨房热锅**。六格保留水槽、灶台和餐桌的位置。第一行大人侧身低头洗菜，左格孩子伸手够冒蒸汽的锅耳，右格孩子留在桌边张口叫大人。第二行左格指尖碰到锅耳、孩子缩手，大人才回头。右格大人转身示意孩子在桌旁等。第三行左格孩子托着手指哭，大人放下菜过来查看。右格孩子坐在桌边，大人照看锅。图外讲解词为“锅烫，站在这儿叫我，我来。”
-
-**关门**。六格版左列画孩子把手指伸进打开的门缝 → 大人关门，门边与门框从两侧夹住孩子的手指 → 门重新打开，孩子收手抱着手指哭。右列画同一个孩子后退、双手贴在胸前 → 大人关门，门边与门框之间完全空着 → 孩子双手仍远离关好的门。用斜侧面画门扇开合角度，夹住的那格和右边对应格都放大门边与门框。大人负责把手，孩子的手全程与把手隔开。
-
-**楼梯**。家长说“孩子下楼总把手插兜里，我担心他脸朝下摔倒”。
-
-- **A · 四格，现场提醒**｜左列双手插兜准备下楼 → 一只脚踩空，鞋与台阶之间留出清晰空隙，身体向前倾。右列把手拿出来握住扶手 → 看着台阶，扶着走下一阶。
-- **B · 六格，讲清摔倒和痛哭**｜左列双手插兜下到最后一级，一脚踩空、身体前扑 → 侧面中景画孩子趴倒，脸颊贴到楼梯下的平地，地面与脸颊的接触处画两三道短线 → 孩子坐起来捂着泛红的脸颊，闭眼张嘴痛哭，双颊有清晰泪流。右列同一个孩子先握稳扶手 → 扶着踩下最后一级 → 双脚稳稳站在平地上。
-- 家长说“选 B，最后别画哭”时，左列末格改成孩子坐稳、表情吃惊。图外讲解词为“手拿出来，扶好，我们一级一级走。”
-
-**滑梯**。家长说“画出双脚没有交叠就会骨折”。先说明所查指南推荐坐好、脚朝前，并等前一个孩子离开滑梯底部；没有依据把双脚交叠画成预防骨折的动作。然后给出两个可选重点。[美国儿科学会游乐场安全指南](https://www.healthychildren.org/english/safety-prevention/at-play/pages/safety-on-the-playground.aspx)
-
-- **A · 四格，练习脚朝前**｜左列孩子趴在入口、头朝下准备滑 → 从侧面画头和手先进入滑道、双脚留在后方。右列同一个孩子在入口坐好、脚朝前 → 保持坐姿滑下。
-- **B · 六格，练习等前面空了再滑**｜第一行左右同一起点，蓝衣孩子坐在出口，黄衣孩子坐在坡顶。第二行左格黄衣孩子滑到半坡，蓝衣孩子还在出口。右格蓝衣孩子起身走到滑梯侧面，黄衣孩子坐在坡顶等。第三行用侧面中景。左格黄衣孩子在出口撞上蓝衣孩子，两人衣袖在肩臂处紧贴，接触点外侧有短促撞击线。黄衣孩子猛地收腿刹住，蓝衣孩子身体被带得朝一侧倾、挤紧双眼。右格黄衣孩子脚朝前滑到空出口，蓝衣孩子在滑行路线外。
+- **Stairs, six panels.** Establish the downhill direction with a side view of descending treads. Left shows descent with hands in pockets, a missed tread with a forward fall, then cheek-to-floor contact at the foot of the stairs. Right shows the child grasping the railing, stepping down while holding it, then standing with both feet on the landing.
+- **High book, six panels.** Left shows a child climbing a stool, the stool tipping, and the child sitting on the floor holding a knee. Right shows the child staying on the floor, pointing at the book and looking toward an adult who retrieves and hands over that same unlettered book.
+- **Ball at the curb, eight panels.** Start with a ball rolling off the curb. On the left the child follows it, a car makes simplified side contact and the child loses balance, then the caregiver comes to the seated child. On the right the child stops on the sidewalk and calls the caregiver. The two hold hands while the car passes left to right, ending with its rear leaving the right edge.
+- **Hot pot, six panels.** Show the adult washing vegetables side-on and initially looking at the sink. For a near miss, the child reaches toward the hot handle, pulls back with a visible gap between finger and handle, then steps away. If the approved ending includes touching the handle, show contact before the recoil. On the right the child stays back, calls the adult, and waits at the table while the adult tends the pot.
+- **Door gap, six panels.** The adult operates the door. On the left the child reaches into the open gap, the edges close around the fingertips, and the child withdraws the sore hand when the door opens. On the right the child steps back with hands at the chest while the adult closes the door. Match the closer views of the gap.
+- **Slide exit, six panels.** Both columns begin with one child seated at the top and another at the exit. On the left the first child slides too soon, and their shoulders touch as one loses balance. On the right the first child waits until the exit is clear, then slides seated with feet first. Use those actions when a caregiver suggests an unsupported rule such as crossing the feet to prevent fractures. [American Academy of Pediatrics playground guidance](https://www.healthychildren.org/english/safety-prevention/at-play/pages/safety-on-the-playground.aspx)
