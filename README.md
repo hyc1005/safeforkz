@@ -12,13 +12,21 @@
 
 ## 漫画示例
 
-下面的例图展示左右两列如何交代动作和结果。楼梯和追球使用新版分镜。
+可以按事情发生的地方找例子，也可以按想讲清的动作找分镜。
+
+| 按生活场景 | 按分镜重点 |
+| --- | --- |
+| [居家生活](examples/by-setting/home/) | [碰到危险物](examples/by-action/hazardous-contact/) |
+| [出门与交通](examples/by-setting/traffic/) | [身体失去支撑](examples/by-action/loss-of-support/) |
+| [游乐与运动](examples/by-setting/play-and-sports/) | [进入移动路线](examples/by-action/crossing-paths/) |
+| [公共场所与集体活动](examples/by-setting/public-and-group/) | [主动开口求助](examples/by-action/asking-for-help/) |
+| [户外、自然与动物](examples/by-setting/outdoors-and-animals/) |  |
 
 ### 够高处的书
 
 孩子可以把想要的书指给大人看，站在地面等大人递过来。
 
-<img src="examples/high-shelf.png" alt="左列孩子踩凳取书摔坐，右列孩子站在地上请大人取书" width="440">
+<img src="examples/by-setting/home/wordless-book.png" alt="左列孩子踩凳取书摔坐，右列孩子站在地上请大人取书并接到书" width="440">
 
 ### 关门夹手
 
@@ -36,7 +44,7 @@
 
 用路沿标出该停的位置，再用车头和驶离的车尾交代车辆方向。
 
-<img src="examples/wordless-curb.png" alt="左列追球进入车道，被车碰倒后抱腿哭，右列牵着大人的手留在人行道，车辆向右驶离" width="440">
+<img src="examples/by-setting/traffic/wordless-curb.png" alt="左列追球进入车道，被车碰倒后抱腿哭，右列牵着大人的手留在人行道，车辆向右驶离" width="440">
 
 ## 出图标准
 
